@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rodoslov Milenko Rakićević - Interaktivno Porodično Stablo</title>
+    <!-- Modern Styling -->
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome Icons for modern aesthetic -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1 class="title-sr">Rodoslov Milenko Rakićević</h1>
+            <p class="title-en">Interaktivno porodično stablo</p>
+        </header>
+
+        <!-- Dashboard Dashboard stats and controls -->
+        <div class="dashboard">
+
+
+            <!-- Controls (search, expand, lang) -->
+            <div class="controls">
+
+                <button id="expand-all" class="btn"><i class="fas fa-expand-arrows-alt"></i> Рашири све</button>
+                <button id="collapse-all" class="btn"><i class="fas fa-compress-arrows-alt"></i> Скупи све</button>
+                <button id="lang-toggle" class="btn btn-primary"><i class="fas fa-globe"></i> Латиница</button>
+            </div>
+        </div>
+
+        <!-- Tree container -->
+        <div class="tree-container">
+            <ul class="tree-branch" id="tree-root">
+                <!-- Programmatically rendered by app.js -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Detail Drawer Modal -->
+    <div class="drawer-backdrop" id="drawer-backdrop">
+        <div class="drawer">
+            <button class="drawer-close" id="drawer-close"><i class="fas fa-times"></i></button>
+            
+            <h2 class="drawer-name" id="drawer-name">Миленко Ракићевић</h2>
+            
+            <div class="drawer-section">
+                <h3 class="drawer-sec-title" id="sec-dates">Животни век и Генерација</h3>
+                <p class="drawer-text" id="drawer-dates"></p>
+            </div>
+
+            <div class="drawer-section">
+                <h3 class="drawer-sec-title" id="sec-gender">Лични Подаци</h3>
+                <p class="drawer-text" id="drawer-gender"></p>
+            </div>
+
+            <div class="drawer-section">
+                <h3 class="drawer-sec-title" id="sec-residence"><i class="fas fa-map-marker-alt"></i> Место Борavka</h3>
+                <p class="drawer-text" id="drawer-residence"></p>
+            </div>
+
+            <div class="drawer-section">
+                <h3 class="drawer-sec-title" id="sec-parent"><i class="fas fa-user-friends"></i> Родитељ</h3>
+                <p class="drawer-text" id="drawer-parent"></p>
+            </div>
+
+            <div class="drawer-section">
+                <h3 class="drawer-sec-title" id="sec-spouses"><i class="fas fa-ring"></i> Брачни Партнер(и)</h3>
+                <div class="drawer-text" id="drawer-spouses"></div>
+            </div>
+
+            <div class="drawer-section">
+                <h3 class="drawer-sec-title" id="sec-children"><i class="fas fa-child"></i> Деца</h3>
+                <div class="drawer-text" id="drawer-children"></div>
+            </div>
+
+            <div class="drawer-section">
+                <h3 class="drawer-sec-title" id="sec-notes"><i class="far fa-sticky-note"></i> Изворни текст (PDF)</h3>
+                <div class="drawer-text" id="drawer-notes"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading global data and logic -->
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

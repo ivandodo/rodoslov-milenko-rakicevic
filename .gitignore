@@ -1,0 +1,14 @@
+# Virtual Environment
+.venv/
+__pycache__/
+*.pyc
+
+# Local/System Files
+.DS_Store
+Thumbs.db
+
+# Temporary raw tables/cache
+raw_tables.json
+
+# Firebase Cache
+.firebase/
